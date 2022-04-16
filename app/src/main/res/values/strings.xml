@@ -3,4 +3,24 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="login_background">login background</string>
+    <string name="login">LOGIN</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="coder">by: mr.m</string>
+    <string name="sing_up">SINGUP</string>
+    <string name="name">Name</string>
+    <string name="already_have_an_account_login">Already have an acoount? Login</string>
+    <string name="don_t_have_an_account_sing_up">Don\'t have an acoount? SingUp</string>
+
+    <style name="viewParent">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="loginButton" parent="viewParent">
+        <item name="android:background">@drawable/login_button_bk</item>
+        <item name="android:textColor">@color/whiteTextColor</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
 </resources>
