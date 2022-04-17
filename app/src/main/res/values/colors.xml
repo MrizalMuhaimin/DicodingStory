@@ -20,4 +20,6 @@
     <!--colros for card-->
     <color name="whiteCardColor">#fff</color>
 
+    <color name="redWarning">#F42727</color>
+
 </resources>

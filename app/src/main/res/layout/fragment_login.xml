@@ -39,13 +39,23 @@
             android:textSize="11sp"/>
 
 
-        <EditText
+        <com.example.dicodingstory.util.EmailEditText
+            android:id="@+id/email_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/email"
             android:backgroundTint="@color/primaryTextColor"
             android:textColor="@color/primaryTextColor"
             android:inputType="textEmailAddress"/>
+
+        <TextView
+            android:id="@+id/email_warning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:visibility="invisible"
+            android:text="@string/format_email_tidak_valid"
+            android:textColor="@color/redWarning"
+            android:textSize="11sp"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -55,11 +65,22 @@
             android:textSize="11sp"/>
 
         <com.example.dicodingstory.util.PasswordEditText
+            android:id="@+id/pass_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
             android:backgroundTint="@color/primaryTextColor"
             android:textColor="@color/primaryTextColor"/>
+
+        <TextView
+            android:id="@+id/tv_warning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:visibility="invisible"
+            android:text="@string/minimal_6_karakter"
+            android:textColor="@color/redWarning"
+            android:textSize="11sp"/>
 
         <Button
             android:id="@+id/cirLoginButton"

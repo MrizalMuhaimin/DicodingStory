@@ -12,8 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DicodingStory">
         <activity
-            android:name=".presentation.intent.LoginSigupActivity"
+            android:name=".presentation.intent.DicodingStoryActivity"
             android:exported="false" />
+        <activity
+            android:name=".presentation.intent.LoginSigupActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

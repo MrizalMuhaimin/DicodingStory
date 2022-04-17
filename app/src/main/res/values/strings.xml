@@ -11,6 +11,9 @@
     <string name="name">Name</string>
     <string name="already_have_an_account_login">Already have an acoount? Login</string>
     <string name="don_t_have_an_account_sing_up">Don\'t have an acoount? SingUp</string>
+    <string name="minimal_6_karakter">Minimal 6 karakter</string>
+    <string name="format_email_tidak_valid">Format email tidak valid</string>
+    <string name="field_required">Field tidak boleh kosong</string>
 
     <style name="viewParent">
         <item name="android:layout_width">wrap_content</item>
