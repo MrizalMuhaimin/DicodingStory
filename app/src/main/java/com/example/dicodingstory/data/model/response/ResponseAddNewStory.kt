@@ -5,7 +5,7 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 class ResponseAddNewStory(
-    var error: Boolean,
+    var error: Boolean?,
     var message: String,
 
 ):Parcelable

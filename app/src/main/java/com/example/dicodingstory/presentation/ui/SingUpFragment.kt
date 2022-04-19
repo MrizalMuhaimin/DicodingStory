@@ -21,8 +21,6 @@ class SingUpFragment : Fragment() {
 
     private var _viewBinding: FragmentSingUpBinding? = null
     private val viewBinding get() = _viewBinding!!
-    private var _binding : ActivityLoginSigupBinding ? = null
-    private val binding get() = _binding!!
     private lateinit var  FIELD_REQUIRED : String
 
     override fun onCreateView(
@@ -30,7 +28,7 @@ class SingUpFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        _binding = ActivityLoginSigupBinding.inflate(layoutInflater)
+
         _viewBinding = FragmentSingUpBinding.inflate(inflater,container,false)
 
         return viewBinding.root
@@ -38,7 +36,9 @@ class SingUpFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         val fragment = LoginFragment()
+
         FIELD_REQUIRED = resources.getString(R.string.field_required)
 
         val mainViewModel = ViewModelProvider(requireActivity(), ViewModelProvider.NewInstanceFactory()).get(
@@ -117,12 +117,12 @@ class SingUpFragment : Fragment() {
             if(isValidName(name) && isValidEmail(email) && isValidPassword(pass)){
 
                 mainViewModel.register(name,email,pass)
-                mainViewModel.isLoading.observe(viewLifecycleOwner,{
-                    showLoading(it)
 
-                })
 
-                mainViewModel.response.observe(viewLifecycleOwner,{
+                mainViewModel.responseData.observe(viewLifecycleOwner,{
+
+                    Toast.makeText(activity, it.message, Toast.LENGTH_LONG).show()
+
                     if(it.error == false){
                         val transaction = fragmentManager?.beginTransaction()
                         transaction?.setCustomAnimations(R.anim.slide_in_invers,R.anim.slide_out,R.anim.fade_in,R.anim.fade_out)
@@ -130,7 +130,7 @@ class SingUpFragment : Fragment() {
                         transaction?.commit()
                     }
 
-                    Toast.makeText(activity, it.massage, Toast.LENGTH_LONG).show()
+
 
 
                 })
@@ -142,9 +142,6 @@ class SingUpFragment : Fragment() {
 
     }
 
-    private fun showLoading(isLoading: Boolean) {
-        binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
-    }
 
     private fun isValidName(name:CharSequence):Boolean{
         return name.isNotEmpty()

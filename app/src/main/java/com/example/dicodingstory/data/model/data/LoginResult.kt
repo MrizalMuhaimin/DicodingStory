@@ -5,7 +5,7 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class LoginResult(
-    var userid:String? = null,
+    var userId:String? = null,
     var name: String? = null,
     var token: String? = null
 ):Parcelable

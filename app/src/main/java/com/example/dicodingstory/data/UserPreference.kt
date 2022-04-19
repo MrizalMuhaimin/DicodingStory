@@ -14,7 +14,7 @@ internal class UserPreference(context: Context){
     private val preferences = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
     fun setUser(value: LoginResult) {
         val editor = preferences.edit()
-        editor.putString(USERID, value.userid)
+        editor.putString(USERID, value.userId)
         editor.putString(NAME, value.name)
         editor.putString(TOKEN, value.token)
         editor.apply()
@@ -22,7 +22,7 @@ internal class UserPreference(context: Context){
 
     fun getUser(): LoginResult {
         val model = LoginResult()
-        model.userid = preferences.getString(USERID,"")
+        model.userId = preferences.getString(USERID,"")
         model.name = preferences.getString(NAME, "")
         model.token = preferences.getString(TOKEN, "")
         return model

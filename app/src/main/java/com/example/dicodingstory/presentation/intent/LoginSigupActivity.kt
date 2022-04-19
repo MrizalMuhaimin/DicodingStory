@@ -3,9 +3,11 @@ package com.example.dicodingstory.presentation.intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.lifecycle.ViewModelProvider
 import com.example.dicodingstory.R
 import com.example.dicodingstory.databinding.ActivityLoginSigupBinding
 import com.example.dicodingstory.presentation.ui.LoginFragment
+import com.example.dicodingstory.presentation.viewmodel.LoginAccountViewModel
 
 class LoginSigupActivity : AppCompatActivity() {
 
@@ -13,9 +15,13 @@ class LoginSigupActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login_sigup)
+        binding = ActivityLoginSigupBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         supportActionBar?.hide()
+
+        val loginViewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory()).get(
+            LoginAccountViewModel::class.java)
 
         val mFragmenManager = supportFragmentManager
         val mFragmentLogin= LoginFragment()
@@ -29,8 +35,12 @@ class LoginSigupActivity : AppCompatActivity() {
         }
 
 
-    }
+        loginViewModel.isLoading.observe(this,{
+            showLoading(it)
+        })
 
+
+    }
     private fun showLoading(isLoading: Boolean) {
         binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
     }

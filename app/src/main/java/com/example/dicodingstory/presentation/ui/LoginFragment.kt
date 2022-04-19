@@ -9,11 +9,17 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.FragmentManager
+import androidx.lifecycle.ViewModelProvider
 import com.example.dicodingstory.R
+import com.example.dicodingstory.data.UserPreference
+import com.example.dicodingstory.databinding.ActivityLoginSigupBinding
 import com.example.dicodingstory.databinding.FragmentLoginBinding
 import com.example.dicodingstory.presentation.intent.DicodingStoryActivity
+import com.example.dicodingstory.presentation.viewmodel.CreateAccountViewModel
+import com.example.dicodingstory.presentation.viewmodel.LoginAccountViewModel
 import kotlin.concurrent.fixedRateTimer
 
 
@@ -28,6 +34,7 @@ class LoginFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+
         _viewBinding = FragmentLoginBinding.inflate(inflater,container,false)
 
         return viewBinding.root
@@ -36,9 +43,27 @@ class LoginFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val userPreference = UserPreference(view.context)
+
+        val loginResult = userPreference.getUser()
+
+        if(loginResult.token!!.isNotEmpty()){
+            val intentToStory = Intent(requireActivity(),DicodingStoryActivity::class.java)
+            startActivity(intentToStory)
+            requireActivity().finish()
+
+
+
+        }
+
+        val context = view.context
+
         FIELD_REQUIRED = resources.getString(R.string.field_required)
 
         val fragment = SingUpFragment()
+
+        val mainViewModel = ViewModelProvider(requireActivity(), ViewModelProvider.NewInstanceFactory()).get(
+            LoginAccountViewModel::class.java)
 
         viewBinding.tvSingUp.setOnClickListener{
             val transaction = fragmentManager?.beginTransaction()
@@ -105,19 +130,32 @@ class LoginFragment : Fragment() {
             }
 
             if(isValidEmail(email) && isValidPassword(pass)){
-                val intentToStory = Intent(requireActivity(),DicodingStoryActivity::class.java)
-                startActivity(intentToStory)
-                requireActivity().finish()
+                mainViewModel.login(email,pass)
 
+
+                mainViewModel.responseData.observe(viewLifecycleOwner,{
+
+                    Toast.makeText(activity, it.message, Toast.LENGTH_LONG).show()
+
+                    if(it.error == false){
+
+                        val userPreference = UserPreference(context)
+                        userPreference.setUser(it.loginResult)
+
+                        val intentToStory = Intent(requireActivity(),DicodingStoryActivity::class.java)
+                        startActivity(intentToStory)
+                        requireActivity().finish()
+                    }
+                })
             }
-
         }
-
     }
 
     private fun isValidEmail(email: CharSequence): Boolean {
         return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()
     }
+
+
 
     private fun isValidPassword(pass: CharSequence):Boolean{
         return  pass.length>=6

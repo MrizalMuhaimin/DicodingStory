@@ -5,15 +5,18 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.dicodingstory.data.model.data.LoginResult
 import com.example.dicodingstory.data.model.response.ResponseLogin
+import com.example.dicodingstory.data.model.response.ResponseRegister
 import com.example.dicodingstory.data.network.api.dicodingstory.ApiConfigDicodingStory
+import com.google.gson.JsonParser
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 class LoginAccountViewModel:ViewModel() {
     private val _response = MutableLiveData<ResponseLogin>()
-    val response: LiveData<ResponseLogin> = _response
+    val responseData: LiveData<ResponseLogin> = _response
 
     private val _isLoading = MutableLiveData<Boolean>()
     val isLoading: LiveData<Boolean> = _isLoading
@@ -34,6 +37,16 @@ class LoginAccountViewModel:ViewModel() {
                         _response.value = responseBody!!
                     }
                 }else {
+                    val responseErrorBody = response.errorBody()?.string()
+                    val jsonParser = JsonParser()
+                    val jsonObject = jsonParser.parse(responseErrorBody).asJsonObject
+                    val respon = ResponseLogin(true,jsonObject.get("message").toString(),
+                        LoginResult()
+                    )
+
+
+                    _response.value = respon
+
                     Log.e(ContentValues.TAG, "onFailure User 2: ${response.message()}")
                 }
                 _isLoading.value = false
@@ -41,6 +54,7 @@ class LoginAccountViewModel:ViewModel() {
 
             override fun onFailure(call: Call<ResponseLogin>, t: Throwable) {
                 _isLoading.value = false
+                _response.value = ResponseLogin(true,t.message.toString(),LoginResult())
                 Log.e(ContentValues.TAG, "onFailure User: ${t.message.toString()}")
             }
         })
