@@ -5,9 +5,11 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class ListStory(
-    var id: String,
-    var name: String,
-    var description: String,
-    var photoUrl: String,
-    var createdAl: String,
+    var id: String? ,
+    var name: String?,
+    var description: String?,
+    var photoUrl: String?,
+    var createdAt: String?,
+    var lat: Float?,
+    var lon: Float?,
 ):Parcelable

@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DicodingStory">
         <activity
+            android:name=".presentation.intent.DetailStoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.intent.SettingActivity"
+            android:exported="false" />
+        <activity
             android:name=".presentation.intent.DicodingStoryActivity"
             android:exported="false" />
         <activity

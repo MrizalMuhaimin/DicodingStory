@@ -1,9 +1,11 @@
 package com.example.dicodingstory.presentation.ui
 
+import android.content.ContentValues
 import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import android.util.Patterns
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -43,18 +45,7 @@ class LoginFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val userPreference = UserPreference(view.context)
 
-        val loginResult = userPreference.getUser()
-
-        if(loginResult.token!!.isNotEmpty()){
-            val intentToStory = Intent(requireActivity(),DicodingStoryActivity::class.java)
-            startActivity(intentToStory)
-            requireActivity().finish()
-
-
-
-        }
 
         val context = view.context
 

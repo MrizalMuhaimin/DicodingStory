@@ -14,6 +14,10 @@
     <string name="minimal_6_karakter">Minimal 6 karakter</string>
     <string name="format_email_tidak_valid">Format email tidak valid</string>
     <string name="field_required">Field tidak boleh kosong</string>
+    <string name="deskripsi">Deskripsi :</string>
+    <string name="detail_story">Detail Story</string>
+    <string name="pengaturan">Pengaturan</string>
+    <string name="tombol_kembali">Tombol kembali</string>
 
     <style name="viewParent">
         <item name="android:layout_width">wrap_content</item>

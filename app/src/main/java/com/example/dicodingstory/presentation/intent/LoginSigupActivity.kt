@@ -1,10 +1,14 @@
 package com.example.dicodingstory.presentation.intent
 
+import android.content.ContentValues
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.lifecycle.ViewModelProvider
 import com.example.dicodingstory.R
+import com.example.dicodingstory.data.UserPreference
 import com.example.dicodingstory.databinding.ActivityLoginSigupBinding
 import com.example.dicodingstory.presentation.ui.LoginFragment
 import com.example.dicodingstory.presentation.viewmodel.LoginAccountViewModel
@@ -19,6 +23,19 @@ class LoginSigupActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         supportActionBar?.hide()
+
+        val userPreference = UserPreference(this)
+
+        val loginResult = userPreference.getUser()
+
+        Log.e(ContentValues.TAG, "data login : ${loginResult}")
+
+        if(loginResult.token!=null){
+            val intentToStory = Intent(this@LoginSigupActivity,DicodingStoryActivity::class.java)
+            startActivity(intentToStory)
+            finish()
+        }
+
 
         val loginViewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory()).get(
             LoginAccountViewModel::class.java)
