@@ -7,7 +7,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.dicodingstory.data.model.data.LoginResult
 import com.example.dicodingstory.data.model.response.ResponseLogin
-import com.example.dicodingstory.data.model.response.ResponseRegister
 import com.example.dicodingstory.data.network.api.dicodingstory.ApiConfigDicodingStory
 import com.google.gson.JsonParser
 import retrofit2.Call

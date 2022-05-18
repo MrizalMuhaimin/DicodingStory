@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/lenovo/AndroidStudioProjects/DicodingStory/app/src/main/res/drawable-v21/app_widget_background.xml" value="0.2325" />
+        <entry key="..\:/Users/lenovo/AndroidStudioProjects/DicodingStory/app/src/main/res/drawable-v21/app_widget_inner_view_background.xml" value="0.2325" />
         <entry key="..\:/Users/lenovo/AndroidStudioProjects/DicodingStory/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2575" />
         <entry key="..\:/Users/lenovo/AndroidStudioProjects/DicodingStory/app/src/main/res/drawable-v24/ic_login_bk.xml" value="0.2575" />
         <entry key="..\:/Users/lenovo/AndroidStudioProjects/DicodingStory/app/src/main/res/drawable-v24/login_button_bk.xml" value="0.1935" />
@@ -11,22 +13,35 @@
         <entry key="..\:/Users/lenovo/AndroidStudioProjects/DicodingStory/app/src/main/res/drawable/bg_cube.xml" value="0.2255" />
         <entry key="..\:/Users/lenovo/AndroidStudioProjects/DicodingStory/app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.2495" />
         <entry key="..\:/Users/lenovo/AndroidStudioProjects/DicodingStory/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.2255" />
+        <entry key="..\:/Users/lenovo/AndroidStudioProjects/DicodingStory/app/src/main/res/drawable/ic_baseline_map_24.xml" value="0.3215" />
         <entry key="..\:/Users/lenovo/AndroidStudioProjects/DicodingStory/app/src/main/res/drawable/ic_baseline_more_vert_24.xml" value="0.2255" />
+        <entry key="..\:/Users/lenovo/AndroidStudioProjects/DicodingStory/app/src/main/res/drawable/ic_baseline_photo_camera_24.xml" value="0.3635" />
         <entry key="..\:/Users/lenovo/AndroidStudioProjects/DicodingStory/app/src/main/res/drawable/ic_baseline_warning_24.xml" value="0.1935" />
+        <entry key="..\:/Users/lenovo/AndroidStudioProjects/DicodingStory/app/src/main/res/drawable/ic_capture.xml" value="0.116" />
         <entry key="..\:/Users/lenovo/AndroidStudioProjects/DicodingStory/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2575" />
+        <entry key="..\:/Users/lenovo/AndroidStudioProjects/DicodingStory/app/src/main/res/drawable/ic_place_holder.xml" value="0.1285" />
+        <entry key="..\:/Users/lenovo/AndroidStudioProjects/DicodingStory/app/src/main/res/drawable/ic_switch_camera.xml" value="0.1285" />
         <entry key="..\:/Users/lenovo/AndroidStudioProjects/DicodingStory/app/src/main/res/drawable/login_button_bk.xml" value="0.23" />
+        <entry key="..\:/Users/lenovo/AndroidStudioProjects/DicodingStory/app/src/main/res/layout/activity_add_story.xml" value="0.23143115942028986" />
+        <entry key="..\:/Users/lenovo/AndroidStudioProjects/DicodingStory/app/src/main/res/layout/activity_camera.xml" value="0.20742753623188406" />
         <entry key="..\:/Users/lenovo/AndroidStudioProjects/DicodingStory/app/src/main/res/layout/activity_detail_story.xml" value="0.22" />
-        <entry key="..\:/Users/lenovo/AndroidStudioProjects/DicodingStory/app/src/main/res/layout/activity_dicoding_story.xml" value="0.22" />
+        <entry key="..\:/Users/lenovo/AndroidStudioProjects/DicodingStory/app/src/main/res/layout/activity_dicoding_story.xml" value="0.1" />
         <entry key="..\:/Users/lenovo/AndroidStudioProjects/DicodingStory/app/src/main/res/layout/activity_login_sigup.xml" value="0.18518518518518517" />
         <entry key="..\:/Users/lenovo/AndroidStudioProjects/DicodingStory/app/src/main/res/layout/activity_main.xml" value="0.3625" />
+        <entry key="..\:/Users/lenovo/AndroidStudioProjects/DicodingStory/app/src/main/res/layout/activity_maps.xml" value="0.19791666666666666" />
         <entry key="..\:/Users/lenovo/AndroidStudioProjects/DicodingStory/app/src/main/res/layout/activity_setting.xml" value="0.2558876811594203" />
+        <entry key="..\:/Users/lenovo/AndroidStudioProjects/DicodingStory/app/src/main/res/layout/fragment_add_story.xml" value="0.23143115942028986" />
         <entry key="..\:/Users/lenovo/AndroidStudioProjects/DicodingStory/app/src/main/res/layout/fragment_detail_story.xml" value="0.1" />
         <entry key="..\:/Users/lenovo/AndroidStudioProjects/DicodingStory/app/src/main/res/layout/fragment_list_story.xml" value="0.1762917933130699" />
-        <entry key="..\:/Users/lenovo/AndroidStudioProjects/DicodingStory/app/src/main/res/layout/fragment_login.xml" value="0.25" />
+        <entry key="..\:/Users/lenovo/AndroidStudioProjects/DicodingStory/app/src/main/res/layout/fragment_login.xml" value="0.5728395061728395" />
         <entry key="..\:/Users/lenovo/AndroidStudioProjects/DicodingStory/app/src/main/res/layout/fragment_setting.xml" value="0.22" />
-        <entry key="..\:/Users/lenovo/AndroidStudioProjects/DicodingStory/app/src/main/res/layout/fragment_sing_up.xml" value="0.33" />
+        <entry key="..\:/Users/lenovo/AndroidStudioProjects/DicodingStory/app/src/main/res/layout/fragment_sing_up.xml" value="0.67" />
         <entry key="..\:/Users/lenovo/AndroidStudioProjects/DicodingStory/app/src/main/res/layout/fragment_story.xml" value="0.1" />
+        <entry key="..\:/Users/lenovo/AndroidStudioProjects/DicodingStory/app/src/main/res/layout/image_stack.xml" value="0.3625" />
+        <entry key="..\:/Users/lenovo/AndroidStudioProjects/DicodingStory/app/src/main/res/layout/loading_item.xml" value="0.3625" />
+        <entry key="..\:/Users/lenovo/AndroidStudioProjects/DicodingStory/app/src/main/res/layout/stack_widget.xml" value="0.3392210144927536" />
         <entry key="..\:/Users/lenovo/AndroidStudioProjects/DicodingStory/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.23" />
+        <entry key="..\:/Users/lenovo/AndroidStudioProjects/DicodingStory/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2325" />
       </map>
     </option>
   </component>

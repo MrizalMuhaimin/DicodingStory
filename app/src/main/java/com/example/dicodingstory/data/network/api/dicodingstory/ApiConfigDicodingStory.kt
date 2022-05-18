@@ -6,7 +6,6 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import java.util.concurrent.TimeUnit
 
 class ApiConfigDicodingStory {
     companion object{
@@ -17,7 +16,6 @@ class ApiConfigDicodingStory {
         fun getApiService():ApiServiceDicodingStory {
             val client = OkHttpClient.Builder()
                 .addInterceptor(logger)
-                .connectTimeout(30, TimeUnit.SECONDS)
                 .build()
 
             val retrofit = Retrofit.Builder()

@@ -3,7 +3,7 @@ package com.example.dicodingstory.data
 import android.content.Context
 import com.example.dicodingstory.data.model.data.LoginResult
 
-internal class UserPreference(context: Context){
+class UserPreference(context: Context){
     companion object{
         private const val PREFS_NAME = "user_pref"
         private const val USERID = "userid"

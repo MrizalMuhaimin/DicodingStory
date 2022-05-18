@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DicodingStory</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="login_background">login background</string>
+    <string name="login">MASUK</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="invalid_password">Minimal 6 Characters</string>
+    <string name="invalid_email">Invalid Email Format</string>
+    <string name="coder">by: mr.m</string>
+    <string name="sing_up">DAFTAR</string>
+    <string name="name">Nama</string>
+    <string name="already_have_an_account_login">Sudah punya akun? Masuk</string>
+    <string name="don_t_have_an_account_sing_up">Belum punya akun? Daftar</string>
+    <string name="minimal_6_karakter">Minimal 6 karakter</string>
+    <string name="format_email_tidak_valid">Format email tidak valid</string>
+    <string name="field_required">Field tidak boleh kosong</string>
+    <string name="deskripsi">Deskripsi :</string>
+    <string name="detail_story">Detail Story</string>
+    <string name="pengaturan">Pengaturan</string>
+    <string name="tombol_kembali">Tombol kembali</string>
+    <string name="change_language">Ubah Bahasa</string>
+    <string name="logout">Keluar</string>
+    <string name="createAt">Dibuat :</string>
+    <string name="background_add_story">background add story</string>
+    <string name="add_your_story">Add Your Story</string>
+    <string name="upload">Upload</string>
+    <string name="gallery">Gallery</string>
+    <string name="take_a_picture">Take a Picture</string>
+    <string name="take_picture">Take Picture</string>
+    <string name="camera_fail">Failed to bring up the camera.</string>
+    <string name="no_permission">Not getting permissions.</string>
+    <string name="file_photo_empty">Silakan masukkan berkas gambar terlebih dahulu.</string>
+    <string name="description_field">Diskripsi tidak boleh kosong.</string>
+    <string name="appwidget_text">DicodingStory Widget</string>
+    <string name="add_widget">Add widget</string>
+    <string name="app_widget_description">This is an app widget description</string>
+    <string name="empty_text">TIDAK ADA DATA</string>
+    <string name="message">Sepertinya ada masalah, tekan tombol</string>
+</resources>

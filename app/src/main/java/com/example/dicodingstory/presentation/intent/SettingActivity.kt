@@ -23,4 +23,9 @@ class SettingActivity : AppCompatActivity() {
                 .commit()
         }
     }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return super.onSupportNavigateUp()
+    }
 }

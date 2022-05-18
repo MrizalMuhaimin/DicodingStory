@@ -6,18 +6,38 @@
     <string name="login">LOGIN</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
+    <string name="invalid_password">Minimal 6 Characters</string>
+    <string name="invalid_email">Invalid Email Format</string>
     <string name="coder">by: mr.m</string>
     <string name="sing_up">SINGUP</string>
     <string name="name">Name</string>
     <string name="already_have_an_account_login">Already have an acoount? Login</string>
     <string name="don_t_have_an_account_sing_up">Don\'t have an acoount? SingUp</string>
-    <string name="minimal_6_karakter">Minimal 6 karakter</string>
-    <string name="format_email_tidak_valid">Format email tidak valid</string>
-    <string name="field_required">Field tidak boleh kosong</string>
-    <string name="deskripsi">Deskripsi :</string>
-    <string name="detail_story">Detail Story</string>
-    <string name="pengaturan">Pengaturan</string>
-    <string name="tombol_kembali">Tombol kembali</string>
+    <string name="minimal_6_karakter">Minimum 6 characters</string>
+    <string name="format_email_tidak_valid">Invalid email format</string>
+    <string name="field_required">Field cannot be empty</string>
+    <string name="deskripsi">Description :</string>
+    <string name="detail_story">Details Story</string>
+    <string name="pengaturan">Setting</string>
+    <string name="tombol_kembali">back button</string>
+    <string name="change_language">Change Language</string>
+    <string name="createAt">Create At :</string>
+    <string name="logout">Logout</string>
+    <string name="background_add_story">background add story</string>
+    <string name="add_your_story">Add Your Story</string>
+    <string name="upload">Upload</string>
+    <string name="gallery">Gallery</string>
+    <string name="take_a_picture">Take a Picture</string>
+    <string name="take_picture">Take Picture</string>
+    <string name="camera_fail">Failed to bring up the camera.</string>
+    <string name="no_permission">Not getting permissions.</string>
+    <string name="file_photo_empty">Please enter the image file first.</string>
+    <string name="description_field">The description cannot be empty.</string>
+    <string name="appwidget_text">DicodingStory Widget</string>
+    <string name="add_widget">Add widget</string>
+    <string name="app_widget_description">This is an app widget description</string>
+    <string name="empty_text">NO DATA</string>
+    <string name="message">It seems like there is a problem, press the button</string>
 
     <style name="viewParent">
         <item name="android:layout_width">wrap_content</item>
@@ -29,5 +49,8 @@
         <item name="android:textColor">@color/whiteTextColor</item>
         <item name="android:textStyle">bold</item>
     </style>
+
+    <string name="title_activity_maps">MapsActivity</string>
+
 
 </resources>

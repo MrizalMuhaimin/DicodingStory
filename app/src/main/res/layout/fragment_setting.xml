@@ -66,13 +66,23 @@
             app:layout_constraintVertical_bias="1.0">
 
             <Button
-                android:id="@+id/btn_logout"
+                android:id="@+id/btn_laguage_setting"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Logout"
+                android:text="@string/change_language"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btn_logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/redWarning"
+                android:text="@string/logout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_laguage_setting" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,7 +5,6 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.dicodingstory.data.model.data.ListStory
 import com.example.dicodingstory.data.model.response.ResponseGetAllStory
 import com.example.dicodingstory.data.network.api.dicodingstory.ApiConfigDicodingStory
 import com.google.gson.JsonParser
@@ -19,6 +18,7 @@ class GetAllStoryViewModel:ViewModel() {
 
     private val _isLoading = MutableLiveData<Boolean>()
     val isLoading: LiveData<Boolean> = _isLoading
+
 
 
     fun getAllStory( tokenBearer:String){
@@ -64,5 +64,8 @@ class GetAllStoryViewModel:ViewModel() {
 
 
     }
+
+
+
 
 }

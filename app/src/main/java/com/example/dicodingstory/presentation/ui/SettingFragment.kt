@@ -2,14 +2,11 @@ package com.example.dicodingstory.presentation.ui
 
 import android.content.Intent
 import android.os.Bundle
+import android.provider.Settings
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import com.example.dicodingstory.R
 import com.example.dicodingstory.data.UserPreference
 import com.example.dicodingstory.databinding.FragmentSettingBinding
-import com.example.dicodingstory.presentation.intent.DicodingStoryActivity
 import com.example.dicodingstory.presentation.intent.LoginSigupActivity
 
 
@@ -18,10 +15,6 @@ class SettingFragment : Fragment() {
     private var _viewBinding: FragmentSettingBinding ? =null
     private val viewBinding get() = _viewBinding!!
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -37,9 +30,9 @@ class SettingFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val context = view.context
 
+        setupAction()
+
         viewBinding.settingBtnBack.setOnClickListener {
-            val intentToStory = Intent(requireActivity(),DicodingStoryActivity::class.java)
-            startActivity(intentToStory)
             activity?.finish()
         }
 
@@ -47,6 +40,7 @@ class SettingFragment : Fragment() {
             val userPreference = UserPreference(context)
             userPreference.setUser(null)
             val intentToLogin = Intent(requireActivity(),LoginSigupActivity::class.java)
+            intentToLogin.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intentToLogin)
             activity?.finish()
         }
@@ -56,6 +50,14 @@ class SettingFragment : Fragment() {
         super.onDestroyView()
         _viewBinding = null
     }
+
+    private fun setupAction() {
+        viewBinding.btnLaguageSetting.setOnClickListener {
+            startActivity(Intent(Settings.ACTION_LOCALE_SETTINGS))
+        }
+    }
+
+
 
 
 }

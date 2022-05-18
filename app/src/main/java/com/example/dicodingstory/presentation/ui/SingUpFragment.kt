@@ -2,9 +2,6 @@ package com.example.dicodingstory.presentation.ui
 
 
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
-import android.util.Patterns
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -12,7 +9,6 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import com.example.dicodingstory.R
-import com.example.dicodingstory.databinding.ActivityLoginSigupBinding
 import com.example.dicodingstory.databinding.FragmentSingUpBinding
 import com.example.dicodingstory.presentation.viewmodel.CreateAccountViewModel
 
@@ -52,47 +48,6 @@ class SingUpFragment : Fragment() {
 
         }
 
-        viewBinding.passText.addTextChangedListener(object : TextWatcher {
-            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-
-            }
-
-            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                if (p0.toString().isNotEmpty())
-                    if(p0.toString().length <6){
-                        viewBinding.tvWarning.visibility = View.VISIBLE
-                    }else{
-                        viewBinding.tvWarning.visibility = View.INVISIBLE
-                    }
-
-                else
-                    viewBinding.tvWarning.visibility = View.INVISIBLE
-            }
-            override fun afterTextChanged(p0: Editable?) {
-
-            }
-        })
-
-        viewBinding.emailText.addTextChangedListener(object : TextWatcher{
-            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-
-            }
-
-            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                if (p0.toString().isNotEmpty())
-                    if(!Patterns.EMAIL_ADDRESS.matcher(p0.toString()).matches()){
-                        viewBinding.emailWarning.visibility = View.VISIBLE
-                    }else{
-                        viewBinding.emailWarning.visibility = View.INVISIBLE
-                    }
-
-                else
-                    viewBinding.emailWarning.visibility = View.INVISIBLE
-            }
-            override fun afterTextChanged(p0: Editable?) {
-
-            }
-        })
 
         viewBinding.cirLoginButton.setOnClickListener {
             val name = viewBinding.etNama.text.toString()
@@ -129,9 +84,6 @@ class SingUpFragment : Fragment() {
                         transaction?.replace(R.id.fragment_container, fragment)
                         transaction?.commit()
                     }
-
-
-
 
                 })
 

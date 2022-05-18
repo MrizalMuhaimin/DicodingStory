@@ -8,6 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.app.ActivityOptionsCompat
 import androidx.core.util.Pair
+import androidx.paging.ExperimentalPagingApi
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.dicodingstory.R
@@ -21,9 +22,12 @@ class ListStoryViewHolder(view: View):RecyclerView.ViewHolder(view) {
     private val ivStory:ImageView = view.findViewById(R.id.iv_story)
     private val tvCreateAt: TextView = view.findViewById(R.id.tv_createAt)
     private val profile: CircleImageView = view.findViewById(R.id.iv_user_image)
+    private val createAt: String = itemView.context.getString(R.string.createAt)
+
 
     val context = view.context
 
+    @OptIn(ExperimentalPagingApi::class)
     @SuppressLint("SetTextI18n")
     fun onBind(element:ListStory){
         Glide.with(context)
@@ -31,7 +35,8 @@ class ListStoryViewHolder(view: View):RecyclerView.ViewHolder(view) {
             .centerCrop()
             .into(ivStory)
         tvUsename.text = element.name
-        tvCreateAt.text = "Create At: ${element.createdAt}"
+
+        tvCreateAt.text = "${createAt} ${element.createdAt}"
 
         itemView.setOnClickListener {
 
